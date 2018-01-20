@@ -1,0 +1,127 @@
+*{
+
+	box-sizing: border-box;
+	margin: 0;
+
+}
+
+h1 {	
+
+	text-align: center;
+	background-color: rgb(190, 0, 0);
+	color: white;
+	padding: 10px;
+	font-family: "Lucida Console", serif, Times;
+	font-size: 50px;
+
+}
+
+h2 {
+
+	text-align: left;
+	font-family: "arial", serif, Times;
+	font-size: 35px;
+	margin: 50px;
+}
+
+p {
+
+	font-family: "arial", Times;
+	font-size: 45px;
+	margin: auto;
+	text-align: center;
+
+}
+
+h5 {
+	font-family: "arial", Times;
+	font-size: 25px;
+	padding-right: 100px;
+
+}
+
+.column {
+
+	float: left;
+
+	padding: 10px;
+
+}
+
+button {
+
+	align: center;
+
+	padding: 10px;
+
+	font-size: 20px;
+
+	margin: auto;
+
+	display: block;
+
+	
+}
+
+.left {
+
+	width: 30%;
+	
+}
+
+.right {
+
+	width: 30%;
+	
+}
+.center {
+
+	width: 4%;
+}
+
+.superLeft {
+	width: 18%
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	/*display: inline-block;*/
+	font-size: 24px;
+	padding: 10px;
+	margin-left: 100px;
+	font-family: "arial", Times New Roman
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+div {
+	display: inline-block;
+}
+
+img {
+
+	display: inline-block;
+
+	margin-left: 350px;
+	margin-right: 60px;
+	
+	height: 300px;
+
+	width: 300px;
+	border: 1px solid black;
+
+}
+
+footer {
+	text-align: center;
+	padding: 20px;
+}
+
+
+	
