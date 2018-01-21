@@ -130,7 +130,7 @@ function test() {
 		$("ul").html("");
 		for (i = ranking_list.length - 1; i >=0; i--) {
 			var ranking_pic = "images/" + ranking_list[i][1];
-			$("ul").append("<li><img src = "+ranking_pic+"></img><div>Clicks: "+ranking_list[i][0]+"<br>Image Name: "+ranking_list[i][1]+"<br>Image Elo Ranking: "+ranking_list[i][2]+"</div></li><br><br>");
+			$("ul").append("<li><img src = "+ranking_pic+"></img><div>Clicks: "+ranking_list[i][0]+"<br>Image Name: "+ranking_list[i][1]+"<br>Image Elo Ranking: "+ranking_list[i][2]+"</div></li><br><br><br>");
 		}
 	},
 	error: function() {
