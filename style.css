@@ -34,6 +34,15 @@ h3 {
 
 }
 
+h4 {
+
+	font-family: "arial", Times;
+	font-size: 25px;
+	margin: auto;
+	text-align: center;
+
+}
+
 .column {
 
 	float: left;
