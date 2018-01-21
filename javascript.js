@@ -13,9 +13,7 @@ var Rb;
 
 if(document.getElementsByTagName("title")[0].innerHTML === "FaceMush") {
 	window.onload = start;
-} else {
-	display();
-}
+} 
 
 // Creates initial random pictures and sets default elo for all pics
 
@@ -41,7 +39,7 @@ function newLeftPic() {
 
 	if ("https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberLeft][0] === document.getElementById("leftPic").src
 	|| document.getElementById("rightPic").src === "https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberLeft][0]
-	//|| Rb < (Ra - 20)
+	|| Rb < (Ra - 20)
 	) {
 		console.log("OH NO");
 		newLeftPic();
@@ -60,7 +58,6 @@ function newLeftPic() {
 			type: "POST",
 			url: "http://127.0.0.1:5000/",
 			data: {"name": pics[randomNumberRight][0], "rank": pics[randomNumberRight][1], "clicks": 1},
-			//success: console.log("POSTED MAYBE"),
 			dataType: "text"
 			});
 		});
@@ -79,7 +76,7 @@ function newRightPic() {
 
 	if ("https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberRight][0] === document.getElementById("rightPic").src
 	|| document.getElementById("leftPic").src === "https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberRight][0]
-	//|| Ra < (Rb - 20)
+	|| Ra < (Rb - 20)
 	)	{
 		console.log("OH NO");
 		newRightPic();
@@ -99,7 +96,6 @@ function newRightPic() {
 			type: "POST",
 			url: "http://127.0.0.1:5000/",
 			data: {"name": pics[randomNumberLeft][0], "rank": pics[randomNumberLeft][1], "clicks": 1},
-			//success: console.log("POSTED MAYBE"),
 			dataType: "text"
 			});
 	});
@@ -125,25 +121,19 @@ function elo() {
 
 //Display Ranks of all pics
 
-function display() {
-	//console.log(pics);	
-}
-
 function test() {
 	$.ajax({
 	type: "GET",
 	url: "http://127.0.0.1:5000/",
 
 	success: function() {
-		//console.log(ranking_list);
 		$("ul").html("");
 		for (i = ranking_list.length - 1; i >=0; i--) {
 			var ranking_pic = "images/" + ranking_list[i][1];
 			$("ul").append("<li><img src = "+ranking_pic+"></img><div>Clicks: "+ranking_list[i][0]+"<br>Image Name: "+ranking_list[i][1]+"<br>Image Elo Ranking: "+ranking_list[i][2]+"</div></li><br><br>");
 		}
 	},
-	error: function(data, xhr, Status, error,  err) {
-		//console.log(xhr.responseText, xhr.responseText, xhr.status, xhr.textStatus, xhr.error, xhr.err);
+	error: function() {
 		alert("Error");
 		},
 		dataType: "script"
