@@ -39,7 +39,7 @@ function newLeftPic() {
 
 	if ("https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberLeft][0] === document.getElementById("leftPic").src
 	|| document.getElementById("rightPic").src === "https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberLeft][0]
-	|| Rb < (Ra - 20)
+	|| Rb < (Ra - 100)
 	) {
 		console.log("OH NO");
 		newLeftPic();
@@ -76,7 +76,7 @@ function newRightPic() {
 
 	if ("https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberRight][0] === document.getElementById("rightPic").src
 	|| document.getElementById("leftPic").src === "https://whatislife85.github.io/FaceMush/images/" + pics[randomNumberRight][0]
-	|| Ra < (Rb - 20)
+	|| Ra < (Rb - 100)
 	)	{
 		console.log("OH NO");
 		newRightPic();
