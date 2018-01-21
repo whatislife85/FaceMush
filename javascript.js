@@ -134,7 +134,7 @@ function test() {
 		}
 	},
 	error: function() {
-		alert("Error");
+		alert("Error: I need to study for the linear final so I don't fail the class, so I'll learn how to upload the server for this later.");
 		},
 		dataType: "script"
 	});
